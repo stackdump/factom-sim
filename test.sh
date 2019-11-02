@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-# common commands for local development
+# test the sim server using factom-cli
+which factom-cli >> /dev/null
+if [[ $? -ne 0 ]] ; then
+    echo "factom-cli must be installed"
+    exit 1
+fi
 
 function import() {
 	factom-cli importaddress Fs3E9gV6DXsYzf7Fqx1fVBQPQXV695eP3k5XbmHEZVRLkMdD9qCK # FA2jK2HcLnRdS94dEcU27rF3meoJfpUcZPSinpb7AwQvPRY6RL1Q
@@ -20,7 +25,7 @@ import | buyec | list)
 	$1
 	;;
 *)
-	echo "pass func as arg1"
+	echo "test using factom-cli : ./test.sh [import|buyec|list]"
 	exit -1
 	;;
 esac
