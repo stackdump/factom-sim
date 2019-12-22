@@ -25,7 +25,7 @@ class FactomWalletd(threading.Thread):
 class Factomd(threading.Thread):
 
     def __init__(self, *args, **kwargs):
-        self.factomd = cdll.LoadLibrary(here + "/factomd.so")
+        self.factomd = cdll.LoadLibrary(here + "/libfactomd.so")
         self.factomd.Serve.argtypes = []
         self.factomd.Shutdown.argtypes = []
         super(Factomd, self).__init__(*args, **kwargs)
