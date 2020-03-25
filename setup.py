@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="factom-sim",
-    version="0.1.2",
+    version="0.2.1",
     author="Matthew York",
     author_email="matt.york@factom.com",
     description="",

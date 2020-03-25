@@ -110,3 +110,6 @@ postgres-data
 .vscode
 out.txt
 Pipfile.lock
+
+# factom logs
+*.txt
